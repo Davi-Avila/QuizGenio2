@@ -1,0 +1,384 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #ffffff;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+               Roboto, Arial, sans-serif;
+  color: #222222;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 64px;
+  background-color: #0a2540;
+  padding: 0 1rem;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.18);
+}
+
+.nav-inner {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-brand {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 0;
+}
+
+.nav-logo {
+  height: 40px;
+  width: auto;
+  display: block;
+}
+
+
+.btn-quit {
+  font-weight: 600;
+  letter-spacing: 0.025em;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  background-color: #c8232c;       
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.2s ease,
+              transform 0.1s ease,
+              box-shadow 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12);
+}
+
+.btn-quit:hover {
+  background-color: #e0343e;   
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.18);
+}
+
+
+
+.btn-voltar {
+  font-weight: 600;
+  letter-spacing: 0.025em;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  background-color: #698dae;       
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.2s ease,
+              transform 0.1s ease,
+              box-shadow 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12);
+}
+
+.btn-voltar:hover {
+  background-color: #5d9cd2;       
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.18);
+}
+
+
+.app-main {
+  min-height: 100vh;
+}
+
+
+
+.home-wrapper {
+  min-height: calc(100vh - 64px);
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;                
+  justify-content: center;           
+  padding: 1rem;
+}
+
+.home-content {
+  width: 100%;
+  max-width: 600px;                  
+  display: flex;
+  flex-direction: column;
+  align-items: center;           
+}
+
+
+.logo-card {
+  background-color: #ffffff;
+  border-radius: 1rem;
+  padding: 2.5rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+  border: 1px solid #e9ecef;
+  width: 100%;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+}
+
+.logo-image {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.buttons-stack {
+  width: 100%;
+  max-width: 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;                       /
+}
+
+
+.btn-app {
+  display: block;
+  width: 100%;
+  font-weight: 600;
+  letter-spacing: 0.025em;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease,
+              transform 0.1s ease,
+              box-shadow 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+}
+
+.btn-app-primary {
+  background-color: #0a2540;         
+  color: #ffffff;
+}
+
+.btn-app-primary:hover {
+  background-color: #103a66;
+  color: #ffffff;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+}
+
+.btn-app-primary:focus,
+.btn-app-primary:active,
+.btn-app-primary:focus-visible {
+  background-color: #08203a;
+  color: #ffffff;
+  outline: none;
+  box-shadow: 0 0 0 0.25rem rgba(10, 37, 64, 0.35);
+}
+
+
+.conteudo-wrapper {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background-color: #ffffff;
+  border-radius: 1rem;
+  border: 1px solid #e9ecef;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  margin-top: 10%;
+}
+
+.titulo-pagina {
+  color: #0a2540;
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+}
+
+.descricao-pagina {
+  color: #333333;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+
+@media (max-width: 576px) {
+  .navbar {
+    height: 56px;
+  }
+  .nav-logo {
+    height: 32px;
+  }
+  .btn-quit {
+    padding: 0.4rem 0.75rem;
+    font-size: 0.9rem;
+  }
+  .app-main {
+    padding-top: 56px;
+  }
+  .home-wrapper {
+    min-height: calc(100vh - 56px);
+    padding: 0.5rem;
+  }
+  .logo-card {
+    padding: 1.75rem 1rem;
+  }
+}
+
+
+
+
+.quiz-page {
+  min-height: 100vh;
+  padding: 100px 1rem 2rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #d9e8f5;
+}
+
+
+
+.quiz-card {
+  width: 100%;
+  max-width: 750px;
+
+  background-color: #ffffff;
+
+  border-radius: 1rem;
+  padding: 2rem;
+
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+
+
+
+.quiz-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 1.5rem;
+}
+
+.numero-questao {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #0a2540;
+}
+
+.materia {
+  background-color: #e8f0f7;
+  color: #0a2540;
+
+  padding: 0.4rem 0.75rem;
+  border-radius: 0.5rem;
+
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+
+
+.quiz-question {
+  margin-bottom: 2rem;
+}
+
+.quiz-question h1 {
+  color: #222222;
+  font-size: 1.5rem;
+  line-height: 1.4;
+  text-align: left;
+}
+
+
+.respostas {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.respostas button {
+  width: 100%;
+
+  padding: 0.9rem 1rem;
+
+  background-color: #ffffff;
+  color: #0a2540;
+
+  border: 2px solid #d6e0e8;
+  border-radius: 0.5rem;
+
+  font-size: 1rem;
+  font-weight: 500;
+
+  text-align: left;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.1s ease;
+}
+
+.respostas button:hover {
+  background-color: #eef5fa;
+  border-color: #0a2540;
+  transform: translateY(-1px);
+}
+
+
+
+#resultado {
+  margin-top: 1.5rem;
+
+  text-align: center;
+
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+
+
+@media (max-width: 576px) {
+
+  .quiz-page {
+    padding: 80px 1rem 1rem;
+  }
+
+  .quiz-card {
+    padding: 1.5rem;
+  }
+
+  .quiz-question h1 {
+    font-size: 1.25rem;
+  }
+
+  .respostas button {
+    font-size: 0.95rem;
+  }
+}
+
+#listaResultados {
+    margin-top: 2rem;
+}
+
+.resultado-questao {
+    padding: 0.75rem 1rem;
+    margin-bottom: 0.5rem;
+    border-radius: 0.5rem;
+    background-color: #f1f1f1;
+    font-weight: 600;
+}

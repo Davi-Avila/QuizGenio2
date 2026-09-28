@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questões</title>
+    <link rel="shortcut icon" type="image/x-icon" href="Imagens/miniLogo.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="nav-inner">
+
+            <a href="#/" class="nav-brand">
+                <img src="./Imagens/logo.png" alt="Quiz Gênio" class="nav-logo">
+            </a>
+
+            <button type="button" class="btn-quit" id="btnDesistir" onclick="desistir()">
+                Desistir
+            </button>
+
+        </div>
+    </nav>
+
+    <section class="quiz-page">
+    <div class="quiz-card">
+
+        <div class="quiz-header">
+            <span id="numeroQuestao" class="numero-questao">
+                Questão 1
+            </span>
+
+            <span id="materia" class="materia">
+                Matemática
+            </span>
+        </div>
+
+        <div class="quiz-question">
+            <h1 id="pergunta">
+                Quanto é 2 + 2?
+            </h1>
+        </div>
+
+        <div class="respostas">
+            <button id="respostaA" onclick="responder(0)">
+                Resposta A
+            </button>
+
+            <button id="respostaB" onclick="responder(1)">
+                Resposta B
+            </button>
+
+            <button id="respostaC" onclick="responder(2)">
+                Resposta C
+            </button>
+
+            <button id="respostaD" onclick="responder(3)">
+                Resposta D
+            </button>
+        </div>
+
+        <p id="resultado"></p>
+
+    </div>
+</section>
+
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>
